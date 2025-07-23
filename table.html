@@ -1,91 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        .s1{
-            color:blue;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <title>Weekly Timetable</title>
+  <style>
+    table {
+      width: 80%;
+      border-collapse: collapse;
+      margin: 20px auto;
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+    th, td {
+      border: 5px solid #868;
+      padding: 10px;
+    }
+     thead {
+      background-color: #d3f3f1;
+      font-weight: bold;
+    }
+    tbody tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+    caption {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
-    <table border="1">
-        <tr>
-            <td></td>
-            <td>8:30-9:30</td>
-            <td>8:30-9:30</td>
-            <td>8:30-9:30</td>
-            <td>8:30-9:30</td>
-            <td>8:30-9:30</td>
-            <td>8:30-9:30</td>
-            <td>8:30-9:30</td>
-            <td>8:30-9:30</td>
-        </tr>
-        <tr>
-            <td>Monday</td>
-            <td>---</td>
-            <td>sub1</td>
-            <td>sub2</td>
-            <td>sub4</td>
-            <td rowspan="6">lunch</td>
-            <td>counselling</td>
-            <td>library</td>
-            <td>sub5</td>
-        </tr>
-        <tr>
-            <td>Tuesday</td>
-            <td>---</td>
-            <td>sub1</td>
-            <td>sub2</td>
-            <td>sub4</td>
-           
-            <td>counselling</td>
-            <td>library</td>
-            <td>sub5</td>
-        </tr>
-        <tr>
-            <td>Monday</td>
-            <td>---</td>
-            <td>sub1</td>
-            <td>sub2</td>
-            <td>sub4</td>
-            
-            <td colspan="3">Lab</td>
-           
-        </tr>
-        <tr>
-            <td>Monday</td>
-            <td>Sub1</td>
-            <td>sub1</td>
-            <td>sub2</td>
-            <td>sub4</td>
-           
-            <td>counselling</td>
-            <td>library</td>
-            <td>sub5</td>
-             </tr>
-        <tr>
-            <td>Monday</td>
-            <td>Sub1</td>
-            <td>sub1</td>
-            <td>sub2</td>
-            <td>sub4</td>
-          
-            <td>counselling</td>
-            <td>library</td>
-            <td>sub5</td>
-        </tr>
-        <tr>
-            <td>Monday</td>
-            <td>Sub1</td>
-            <td colspan="3">Seminar</td>
-           
-            <td>counselling</td>
-            <td>library</td>
-            <td>sub5</td>
-        </tr>
-    </table>
+
+<table>
+  <caption>Class Timetable - B.Tech CSE</caption>
+  
+  <colgroup>
+    <col style="background-color: #f2f2f2;"> <!-- Day column -->
+    <col span="4" style="background-color: #ffffff;"> <!-- Morning sessions -->
+    <col style="background-color: #ffe4e1;"> <!-- Lunch column -->
+    <col span="2" style="background-color: #f0fff0;"> <!-- Afternoon sessions -->
+  </colgroup>
+
+  <thead>
+    <tr>
+      <th>Day</th>
+      <th>9:00 - 10:00</th>
+      <th>10:00 - 11:00</th>
+      <th>11:00 - 12:00</th>
+      <th>12:00 - 1:00</th>
+      <th>Lunch</th>
+      <th>2:00 - 3:00</th>
+      <th>3:00 - 4:00</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Monday</td>
+      <td>Maths</td>
+      <td>Physics</td>
+      <td>English</td>
+      <td>Python</td>
+      <td rowspan="5">Break</td>
+      <td colspan="2">DS Lab</td>
+      
+    </tr>
+     <tr>
+        <td>Tuesday</td>
+        <td>Java</td>
+        <td>Maths</td>
+        <td>Database</td>
+        <td>Web Tech</td>
+        <td colspan="2">Project</td>
+        
+      </tr>
+      <tr>
+        <td>Wednesday</td>
+        <td>Python</td>
+        <td>English</td>
+        <td>Physics</td>
+        <td>Database</td>
+        <td>Library</td>
+         <td>Sports</td>
+      </tr>
+      <tr>
+        <td>Thursday</td>
+        <td>Web Tech</td>
+        <td>Maths</td>
+        <td>Python</td>
+        <td>Java</td>
+        <td colspan="2">Database Lab</td>
+        
+      </tr>
+      <tr>
+        <td>Friday</td>
+        <td>Project</td>
+        <td>English</td>
+        <td>Physics</td>
+        <td>Java</td>
+        <td colspan="2">Seminar</td>
+        
+      </tr>
+  </tbody>
+</table>
+
+
 </body>
 </html>
