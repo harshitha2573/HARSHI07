@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Demo</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            background-color: blanchedalmond;
+            font-size: 20px;
+            color: blueviolet;
+            text-align: center;
+            padding: 20px;
+        }
+        nav{
+            background-color:lightpink;
+            justify-content: space-between;
+        }
+        nav a{
+            color:darkgray;
+            font-size: 10px;
+            margin-left:10px;
+        }
+        marque{
+            background-color: lightcyan;
+        }
+        .container{
+            text-align: center;
+        }
+        img{
+            height: 40px;
+        }
+        video{
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <header>Welocome to my Media Page</header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Gallery</a>
+        <a href="#">Music</a>
+        <a href="#">Video</a>
+        <a href="#">Contact</a>
+
+    </nav>
+    <marquee>This is for demo purpose. Latest updates will be released by Aug10th 2025!
+    </marquee>
+    <div class="container">
+        <h2>Gallery Section</h2>
+        <img src="klu.jpeg.jpg" alt="kl logo">
+        <h2>Audio Section</h2>
+        <audio controls>
+            <source src="audio.mp3" type="audio/mpeg"> Your browser may not support audio files...
+        </audio>
+        <h2>Video Section</h2>
+        <video controls>
+            <source src="video.mp4" type="video/mp4"> Your browser may not support video files...
+        </video>
+    </div>
+</body>
+</html>
