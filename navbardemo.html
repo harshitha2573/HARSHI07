@@ -4,6 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navbar Demo</title>
+    <style>
+        *{
+            border-radius: 10px;
+        }
+        .navbar{
+            display:flex;
+            background-color: darksalmon;
+            justify-content: space-between;
+            padding:10px 10px;
+        }
+        .navbar .logo
+        {
+            flex:1;
+        }
+        .navbar .logo img{
+            height:40px;
+        }
+        .navbar .title{
+            flex:2;
+            text-align: center;
+            font-weight: bold;
+            font-size: 20px;
+            color: cyan;
+        }
+        .navbar .links{
+            flex:1;
+        }
+        .navbar .links a{
+            color:darkmagenta;
+            margin-left:20px;
+            font-size:15px;
+        }
+
+    </style>
+
 </head>
 <body>
     <nav class="navbar">
@@ -14,9 +49,9 @@
             Learning Managment System
         </div>
         <div class="links">
-            <a href="">Home</a>
-            <a href="">About us</a>
-            <a href="">Sign up/Sign in</a>
+            <a href="https://newerp.kluniversity.in">Home</a>
+            <a href="#">About us</a>
+            <a href="#">Sign up/Sign in</a>
         </div>
     </nav>
 </body>
