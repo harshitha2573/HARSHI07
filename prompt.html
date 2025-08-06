@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="getName()">Enter Your Name</button>
+    <script>
+        function getName() {
+            const name = prompt("What is your name?");
+            if (name) {
+                alert("Hello, " + name + "!");
+            } else {
+                alert("You didn't enter anything. ");
+            }
+        }
+    </script>
+</body>
+</html>
