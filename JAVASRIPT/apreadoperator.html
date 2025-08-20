@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1. to copy an array
+        let numbers = [1, 2, 3];
+        let newNumbers = [...numbers];   // Copy array
+        document.write("Original: " + numbers + "<br>");
+        document.write("Copy: " + newNumbers);
+        document.write("<br>");
+
+        //2. To merge the arrays
+        let arr1 = [10, 20];
+        let arr2 = [30, 40];
+        let merged = [...arr1, ...arr2]; // Merge arrays
+        document.write("Merged Array: " + merged);
+        document.write("<br>");
+
+        //3. Using spread with objects
+        let student = { name: "Rahul", age: 21 };
+        let details = { course: "JavaScript", year: 2025 };
+        let mergedObject = { ...student, ...details }; // Merge objects
+        document.write("Merged Object: " + JSON.stringify(mergedObject));
+        document.write("<br>");
+          //4. Passing array elements as function arguments
+        function add(a, b, c) {
+             return a + b + c;
+        }
+        let nums = [5, 10, 15];
+        document.write("Sum: " + add(...nums)); // Spread as arguments
+    </script>
+</body>
+</html>
