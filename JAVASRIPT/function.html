@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Function Types Demo</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        button { margin: 5px; }
+        #output { margin-top: 20px; white-space: pre-line; }
+    </style>
+</head>
+<body>
+    <h2>JavaScript Function Types Demo</h2>
+    <button onclick="runDeclaration()">Function Declaration</button>
+    <button onclick="runExpression()">Function Expression</button>
+    <button onclick="runArrow()">Arrow Function</button>
+    <button onclick="runAnonymous()">Anonymous Function</button>
+    <button onclick="runIIFE()">IIFE</button>
+    <button onclick="runConstructor()">Constructor Function</button>
+    <button onclick="runGenerator()">Generator Function</button>
+    <button onclick="runAsync()">Async Function</button>
+
+    <div id="output">Output will appear here...</div>
+
+    <script>
+        const outputDiv = document.getElementById("output");
+
+        function clearOutput() {
+            outputDiv.innerText = "Output:\n";
+        }
+
+        function show(msg) {
+            outputDiv.innerText += msg + "\n";
+        }
+
+        // Function Declaration
+        function calculateTotal(price, tax) {
+            return price + (price * tax);
+        }
+
+        function runDeclaration() {
+            clearOutput();
+            show("Function Declaration:");
+            show("Total = " + calculateTotal(100, 0.05));
+        }
+
+        // Function Expression
+        const calculateExpression = function(price, tax) {
+            return price + (price * tax);
+        };
+
+        // Additional function expression with greeting
+        const greetUser = function(name) {
+            return `Welcome, ${name}!`;
+        };
+
+        function runExpression() {
+            clearOutput();
+            show("Function Expression:");
+            show("Total = " + calculateExpression(100, 0.05));
+            show(greetUser("Mona")); // Added greeting
+        }
+
+        // Arrow Function
+        const calculateArrow = (price, tax) => price + (price * tax);
+
+        function runArrow() {
+            clearOutput();
+            show("Arrow Function:");
+            show("Total = " + calculateArrow(100, 0.05));
+        }
+
+        // Anonymous Function (used as callback)
+        function runAnonymous() {
+            clearOutput();
+            show("Anonymous Function:");
+            setTimeout(function() {
+                show("Executed after 1 second using anonymous function.");
+            }, 1000);
+        }
+
+        // Immediately Invoked Function Expression (IIFE)
+        function runIIFE() {
+            clearOutput();
+            show("IIFE:");
+            (function(price, tax) {
+                show("Total = " + (price + price * tax));
+            })(100, 0.05);
+        }
+
+        // Constructor Function
+        function runConstructor() {
+            clearOutput();
+            show("Constructor Function:");
+            const Calculator = new Function("price", "tax", "return price + (price * tax);");
+            show("Total = " + Calculator(100, 0.05));
+        }
+
+        // Generator Function
+        function* totalGenerator(price, tax) {
+            yield price + (price * tax);
+        }
+
+        function runGenerator() {
+            clearOutput();
+            show("Generator Function:");
+            const gen = totalGenerator(100, 0.05);
+            show("Total = " + gen.next().value);
+        }
+
+        // Async Function
+        async function calculateAsync(price, tax) {
+            return new Promise(resolve => {
+                setTimeout(() => {
+                    resolve(price + (price * tax));
+                }, 1000);
+            });
+        }
+
+        async function runAsync() {
+            clearOutput();
+            show("Async Function:");
+            const total = await calculateAsync(100, 0.05);
+            show("Total = " + total);
+        }
+        const tasks = ["Work", "Sleep", "Exercise", "Study"];
+        const shortTasks = tasks.filter(task => task.length <= 5);
+        function runArrow() {
+            clearOutput();
+            show("Short Tasks: " + shortTasks.join(", "));
+        }
+        function runAnonymous() {
+            clearOutput();
+            setTimeout(function() {
+                show("Remainder: Take a break!");
+
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
